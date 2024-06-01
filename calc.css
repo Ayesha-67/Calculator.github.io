@@ -1,0 +1,65 @@
+body{
+    background-color: white;
+    padding-top: 4em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+}
+.container{
+    background-color: #3c312b;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: fit-content;
+}
+table{
+    background-color: #d7c3a5;
+    border-color: black;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    color: #f7b22c;
+} 
+
+#output{
+    width: 420px;
+    height: 50px;
+    text-align: right;
+    border-radius: 10px;
+    font-size: 2em;
+    border: none;
+}
+#ip1, #ip2{
+    width: 205px;
+    height:40px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    text-align: center;
+}
+.b,#add,#sub,#mul,#div{
+    padding: 15px;
+    font-size: 1.5em;
+    border-radius: 90px;
+    border: none;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+input[type = 'reset']{
+    width: 315px;
+    height: 50px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 90px;
+    background-color: #f7b22c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

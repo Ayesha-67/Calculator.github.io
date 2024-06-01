@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>My calculator</title>
+        <link rel="stylesheet" type="text/css" href="calc.css">
+    </head>
+    <body>
+    <div class="container">
+        <center>
+            <h1> A SIMPLE CALCULATOR  </h1>
+            <form>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="0" id="output" />
+                        <br><br>
+                        <input type="text" id="ip1" placeholder="Enter operand 1" onclick="setActiveInput('ip1')" /></label>
+                        <input type="text" id="ip2" placeholder="Enter operand 2" onclick="setActiveInput('ip2')"/></label>   
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="b" value="7" onclick="input('7')"/>
+                        <input type="button" class="b" value="8" onclick="input('8')"/>
+                        <input type="button" class="b" value="9" onclick="input('9')"/>
+                        <input type="button" value="+" id="add" onclick="call(this.id)"/>
+                        <br><br>
+                        <input type="button" class="b" value="4" onclick="input('4')"/>
+                        <input type="button" class="b" value="5" onclick="input('5')"/>
+                        <input type="button" class="b" value="6" onclick="input('6')"/>
+                        <input type="button" value="-" id='sub' onclick="call(this.id)"/>
+                        <br><br>
+                        <input type="button" class="b" value="1" onclick="input('1')"/>
+                        <input type="button" class="b" value="2" onclick="input('2')"/>
+                        <input type="button" class="b" value="3" onclick="input('3')"/>
+                        <input type="button" value="*" id="mul" onclick="call(this.id)"/>
+                        <br><br>
+                        <input type="reset" value="CLEAR"/>
+                        <input type="button" value="/" id="div" onclick="call(this.id)"/>
+                    </td>
+                </tr> 
+            </table>
+            </form>
+        </center>
+    </div>
+        <script type="text/javascript">
+            
+            let v1 = document.getElementById("ip1");
+            let v2 = document.getElementById("ip2");
+            let activeInput = null;
+            function setActiveInput(inputId){
+                activeInput = inputId;
+            }
+            function input(ivalue){
+                if (activeInput === 'ip1'){
+                    v1.value = v1.value === '' ? ivalue : v1.value + ivalue;
+                }
+                else if(activeInput === 'ip2'){
+                    v2.value = v2.value === '' ? ivalue : v2.value + ivalue;
+                }
+            }
+            function call(click_id)
+            {
+                let op1 = parseFloat(document.getElementById("ip1").value);
+                let op2 = parseFloat(document.getElementById("ip2").value);
+                if(isNaN(op1) || isNaN(op2))
+                    alert("Enter a Valid number");
+                else{
+                switch(click_id)
+                {
+                    case "add":
+                        document.getElementById("output").value = op1 + op2;
+                        break;
+                    case "sub":
+                        document.getElementById("output").value = op1 - op2;
+                        break;
+                    case "mul":
+                        document.getElementById("output").value = op1 * op2;
+                        break;
+                    case "div":
+                        document.getElementById("output").value = op1 / op2;
+                        break;
+                }}
+            }          
+        </script>
+    
+    </body>
+</html>
